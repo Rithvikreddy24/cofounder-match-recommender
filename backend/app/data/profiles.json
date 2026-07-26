@@ -1,0 +1,786 @@
+[
+    {
+        "id": 1,
+        "name": "Logan Smith",
+        "role": "AI Engineer",
+        "skills": [
+            "NLP",
+            "RAG",
+            "TensorFlow"
+        ],
+        "interests": [
+            "SaaS",
+            "FinTech"
+        ],
+        "experience": 7,
+        "availability": "Weekends",
+        "bio": "Passionate about building state-of-the-art LLM applications. Interested in launching an AI-first startup in SaaS."
+    },
+    {
+        "id": 2,
+        "name": "Isabella White",
+        "role": "Machine Learning Engineer",
+        "skills": [
+            "Deep Learning",
+            "Pandas",
+            "MLOps"
+        ],
+        "interests": [
+            "Robotics",
+            "SaaS",
+            "ClimateTech",
+            "EdTech"
+        ],
+        "experience": 10,
+        "availability": "Weekends",
+        "bio": "Specializes in training and deploying complex ML models. Seeking to automate processes in the Robotics space."
+    },
+    {
+        "id": 3,
+        "name": "William Moore",
+        "role": "Full Stack Developer",
+        "skills": [
+            "React",
+            "PostgreSQL",
+            "Node.js",
+            "TypeScript"
+        ],
+        "interests": [
+            "ClimateTech",
+            "EdTech"
+        ],
+        "experience": 2,
+        "availability": "Part-time",
+        "bio": "Dynamic developer with a passion for building scalable web apps from scratch. Looking to join a fast-paced ClimateTech project."
+    },
+    {
+        "id": 4,
+        "name": "Grace Ramirez",
+        "role": "Backend Developer",
+        "skills": [
+            "Redis",
+            "Docker",
+            "Python"
+        ],
+        "interests": [
+            "Healthcare",
+            "AI"
+        ],
+        "experience": 2,
+        "availability": "Weekends",
+        "bio": "Backend specialist focusing on high-performance APIs and database architecture. Interested in building infrastructure for Healthcare."
+    },
+    {
+        "id": 5,
+        "name": "John White",
+        "role": "Frontend Developer",
+        "skills": [
+            "Tailwind CSS",
+            "Vue",
+            "HTML/CSS",
+            "TypeScript",
+            "JavaScript"
+        ],
+        "interests": [
+            "ClimateTech",
+            "EdTech"
+        ],
+        "experience": 0,
+        "availability": "Part-time",
+        "bio": "Frontend enthusiast obsessed with user experience and clean code. Ready to build the face of a new startup in ClimateTech."
+    },
+    {
+        "id": 6,
+        "name": "Amanda Ramirez",
+        "role": "Mobile Developer",
+        "skills": [
+            "Kotlin",
+            "React Native",
+            "iOS",
+            "Dart"
+        ],
+        "interests": [
+            "SaaS",
+            "Robotics",
+            "E-commerce"
+        ],
+        "experience": 1,
+        "availability": "Full-time",
+        "bio": "Passionate about building intuitive mobile apps that users love. Looking to partner with a visionary in SaaS."
+    },
+    {
+        "id": 7,
+        "name": "Noah Scott",
+        "role": "Data Scientist",
+        "skills": [
+            "Data Analysis",
+            "Tableau",
+            "Statistics",
+            "R"
+        ],
+        "interests": [
+            "EdTech",
+            "SaaS",
+            "ClimateTech",
+            "Cybersecurity"
+        ],
+        "experience": 9,
+        "availability": "Part-time",
+        "bio": "Analytical thinker who loves finding patterns in unstructured data. Looking to leverage data to drive growth in EdTech."
+    },
+    {
+        "id": 8,
+        "name": "Olivia Flores",
+        "role": "Product Manager",
+        "skills": [
+            "Product Strategy",
+            "User Research",
+            "Agile"
+        ],
+        "interests": [
+            "SaaS",
+            "Cybersecurity",
+            "FinTech"
+        ],
+        "experience": 10,
+        "availability": "Full-time",
+        "bio": "User-centric product manager focused on shipping impactful features. Looking to lead product strategy in the SaaS sector."
+    },
+    {
+        "id": 9,
+        "name": "Jack Lopez",
+        "role": "UI/UX Designer",
+        "skills": [
+            "Adobe XD",
+            "Visual Design",
+            "Figma",
+            "Wireframing",
+            "User Research"
+        ],
+        "interests": [
+            "E-commerce",
+            "Robotics",
+            "Agriculture"
+        ],
+        "experience": 7,
+        "availability": "Weekends",
+        "bio": "Strives to create simple, elegant solutions to complex user problems. Interested in designing for E-commerce."
+    },
+    {
+        "id": 10,
+        "name": "Lucas Garcia",
+        "role": "DevOps Engineer",
+        "skills": [
+            "Linux",
+            "Docker",
+            "Bash",
+            "AWS",
+            "Terraform"
+        ],
+        "interests": [
+            "Healthcare",
+            "ClimateTech",
+            "E-commerce"
+        ],
+        "experience": 2,
+        "availability": "Full-time",
+        "bio": "Infrastructure and automation enthusiast. Looking to build secure and scalable cloud infrastructure for Healthcare platforms."
+    },
+    {
+        "id": 11,
+        "name": "Sebastian Clark",
+        "role": "Business Development",
+        "skills": [
+            "Sales",
+            "Strategy",
+            "Partnerships"
+        ],
+        "interests": [
+            "AI",
+            "EdTech",
+            "Agriculture"
+        ],
+        "experience": 5,
+        "availability": "Full-time",
+        "bio": "Focused on establishing market presence and strategic alliances. Passionate about scaling startups in the AI space."
+    },
+    {
+        "id": 12,
+        "name": "Aiden Allen",
+        "role": "Marketing Strategist",
+        "skills": [
+            "Google Analytics",
+            "SEO",
+            "Growth Hacking",
+            "Content Marketing",
+            "Social Media"
+        ],
+        "interests": [
+            "ClimateTech",
+            "EdTech",
+            "FinTech"
+        ],
+        "experience": 2,
+        "availability": "Part-time",
+        "bio": "Growth marketer with a track record of driving organic user acquisition. Looking to build a strong brand in ClimateTech."
+    },
+    {
+        "id": 13,
+        "name": "John Martinez",
+        "role": "Sales Lead",
+        "skills": [
+            "Sales Pipeline",
+            "Cold Outreach",
+            "Lead Generation",
+            "Closing",
+            "B2B Sales"
+        ],
+        "interests": [
+            "Healthcare",
+            "E-commerce",
+            "Robotics",
+            "EdTech"
+        ],
+        "experience": 0,
+        "availability": "Full-time",
+        "bio": "Experienced B2B sales expert who loves building client relationships. Ready to build the sales engine for a startup in Healthcare."
+    },
+    {
+        "id": 14,
+        "name": "Sophia Jones",
+        "role": "Cybersecurity Engineer",
+        "skills": [
+            "Network Security",
+            "OWASP",
+            "Wireshark",
+            "SIEM",
+            "Cryptography",
+            "Penetration Testing"
+        ],
+        "interests": [
+            "Agriculture",
+            "Healthcare",
+            "FinTech",
+            "SaaS"
+        ],
+        "experience": 8,
+        "availability": "Full-time",
+        "bio": "Cybersecurity engineer dedicated to protecting user data and digital assets. Seeking to join a security-minded startup in Agriculture."
+    },
+    {
+        "id": 15,
+        "name": "William Perez",
+        "role": "Cloud Engineer",
+        "skills": [
+            "IAM",
+            "Docker",
+            "Azure"
+        ],
+        "interests": [
+            "SaaS",
+            "E-commerce",
+            "EdTech",
+            "ClimateTech"
+        ],
+        "experience": 6,
+        "availability": "Part-time",
+        "bio": "Cloud architect skilled in building high-availability cloud systems. Interested in optimizing infrastructure costs in SaaS."
+    },
+    {
+        "id": 16,
+        "name": "Elijah Johnson",
+        "role": "AI Engineer",
+        "skills": [
+            "RAG",
+            "Python",
+            "LLMs",
+            "TensorFlow",
+            "LangChain"
+        ],
+        "interests": [
+            "Cybersecurity",
+            "Healthcare",
+            "E-commerce",
+            "ClimateTech"
+        ],
+        "experience": 7,
+        "availability": "Full-time",
+        "bio": "AI researcher turned engineer, looking to apply foundation models to real-world problems in Cybersecurity."
+    },
+    {
+        "id": 17,
+        "name": "Evelyn Perez",
+        "role": "Machine Learning Engineer",
+        "skills": [
+            "Pandas",
+            "MLOps",
+            "Scikit-Learn",
+            "SQL",
+            "Deep Learning"
+        ],
+        "interests": [
+            "Healthcare",
+            "FinTech",
+            "AI",
+            "Cybersecurity"
+        ],
+        "experience": 1,
+        "availability": "Weekends",
+        "bio": "Specializes in training and deploying complex ML models. Seeking to automate processes in the Healthcare space."
+    },
+    {
+        "id": 18,
+        "name": "Sarah Allen",
+        "role": "Full Stack Developer",
+        "skills": [
+            "React",
+            "TypeScript",
+            "Node.js"
+        ],
+        "interests": [
+            "FinTech",
+            "AI",
+            "SaaS",
+            "ClimateTech"
+        ],
+        "experience": 0,
+        "availability": "Part-time",
+        "bio": "Dynamic developer with a passion for building scalable web apps from scratch. Looking to join a fast-paced FinTech project."
+    },
+    {
+        "id": 19,
+        "name": "Alex Hernandez",
+        "role": "Backend Developer",
+        "skills": [
+            "FastAPI",
+            "Docker",
+            "Go",
+            "PostgreSQL"
+        ],
+        "interests": [
+            "SaaS",
+            "ClimateTech",
+            "AI",
+            "FinTech"
+        ],
+        "experience": 3,
+        "availability": "Weekends",
+        "bio": "Backend specialist focusing on high-performance APIs and database architecture. Interested in building infrastructure for SaaS."
+    },
+    {
+        "id": 20,
+        "name": "Aiden Lopez",
+        "role": "Frontend Developer",
+        "skills": [
+            "TypeScript",
+            "Webpack",
+            "Vue",
+            "HTML/CSS"
+        ],
+        "interests": [
+            "ClimateTech",
+            "FinTech",
+            "SaaS",
+            "Agriculture"
+        ],
+        "experience": 1,
+        "availability": "Full-time",
+        "bio": "Frontend enthusiast obsessed with user experience and clean code. Ready to build the face of a new startup in ClimateTech."
+    },
+    {
+        "id": 21,
+        "name": "Oliver Miller",
+        "role": "Mobile Developer",
+        "skills": [
+            "React Native",
+            "Swift",
+            "Android",
+            "Kotlin"
+        ],
+        "interests": [
+            "AI",
+            "Robotics",
+            "ClimateTech"
+        ],
+        "experience": 10,
+        "availability": "Part-time",
+        "bio": "Mobile-first developer who builds cross-platform and native apps. Seeking to create a mobile revolution in AI."
+    },
+    {
+        "id": 22,
+        "name": "Logan Miller",
+        "role": "Data Scientist",
+        "skills": [
+            "Tableau",
+            "Statistics",
+            "SQL"
+        ],
+        "interests": [
+            "Robotics",
+            "AI"
+        ],
+        "experience": 10,
+        "availability": "Full-time",
+        "bio": "Data scientist with a strong statistics background. Interested in optimizing operations for Robotics startups."
+    },
+    {
+        "id": 23,
+        "name": "Grace Lopez",
+        "role": "Product Manager",
+        "skills": [
+            "Agile",
+            "Product Strategy",
+            "Scrum",
+            "User Research",
+            "Roadmapping",
+            "Jira"
+        ],
+        "interests": [
+            "FinTech",
+            "EdTech",
+            "ClimateTech",
+            "E-commerce"
+        ],
+        "experience": 9,
+        "availability": "Part-time",
+        "bio": "Experienced in launching products from 0 to 1. Excited about bringing agile practices to a new venture in FinTech."
+    },
+    {
+        "id": 24,
+        "name": "Mason Anderson",
+        "role": "UI/UX Designer",
+        "skills": [
+            "Adobe XD",
+            "Figma",
+            "Prototyping",
+            "Wireframing"
+        ],
+        "interests": [
+            "AI",
+            "E-commerce"
+        ],
+        "experience": 10,
+        "availability": "Full-time",
+        "bio": "Strives to create simple, elegant solutions to complex user problems. Interested in designing for AI."
+    },
+    {
+        "id": 25,
+        "name": "Sebastian Hill",
+        "role": "DevOps Engineer",
+        "skills": [
+            "Linux",
+            "Docker",
+            "Kubernetes"
+        ],
+        "interests": [
+            "SaaS",
+            "Agriculture"
+        ],
+        "experience": 3,
+        "availability": "Full-time",
+        "bio": "Infrastructure and automation enthusiast. Looking to build secure and scalable cloud infrastructure for SaaS platforms."
+    },
+    {
+        "id": 26,
+        "name": "Mia Williams",
+        "role": "Business Development",
+        "skills": [
+            "Strategy",
+            "Sales",
+            "CRM",
+            "Partnerships",
+            "Negotiation"
+        ],
+        "interests": [
+            "EdTech",
+            "E-commerce",
+            "ClimateTech",
+            "FinTech"
+        ],
+        "experience": 9,
+        "availability": "Weekends",
+        "bio": "Focused on establishing market presence and strategic alliances. Passionate about scaling startups in the EdTech space."
+    },
+    {
+        "id": 27,
+        "name": "Liam Davis",
+        "role": "Marketing Strategist",
+        "skills": [
+            "SEO",
+            "Content Marketing",
+            "Google Analytics",
+            "Social Media",
+            "Growth Hacking"
+        ],
+        "interests": [
+            "AI",
+            "SaaS",
+            "Agriculture",
+            "Cybersecurity"
+        ],
+        "experience": 4,
+        "availability": "Weekends",
+        "bio": "Growth marketer with a track record of driving organic user acquisition. Looking to build a strong brand in AI."
+    },
+    {
+        "id": 28,
+        "name": "Jackson Wilson",
+        "role": "Sales Lead",
+        "skills": [
+            "Closing",
+            "Sales Pipeline",
+            "Cold Outreach",
+            "CRM",
+            "Lead Generation",
+            "B2B Sales"
+        ],
+        "interests": [
+            "FinTech",
+            "Agriculture",
+            "E-commerce",
+            "ClimateTech"
+        ],
+        "experience": 6,
+        "availability": "Part-time",
+        "bio": "Experienced B2B sales expert who loves building client relationships. Ready to build the sales engine for a startup in FinTech."
+    },
+    {
+        "id": 29,
+        "name": "Noah Nguyen",
+        "role": "Cybersecurity Engineer",
+        "skills": [
+            "Wireshark",
+            "Penetration Testing",
+            "SIEM",
+            "OWASP",
+            "Cryptography",
+            "Network Security"
+        ],
+        "interests": [
+            "Healthcare",
+            "E-commerce"
+        ],
+        "experience": 2,
+        "availability": "Weekends",
+        "bio": "Cybersecurity engineer dedicated to protecting user data and digital assets. Seeking to join a security-minded startup in Healthcare."
+    },
+    {
+        "id": 30,
+        "name": "Harper King",
+        "role": "Cloud Engineer",
+        "skills": [
+            "Cloud Architecture",
+            "Azure",
+            "GCP",
+            "Docker"
+        ],
+        "interests": [
+            "Cybersecurity",
+            "E-commerce",
+            "Robotics",
+            "Healthcare"
+        ],
+        "experience": 5,
+        "availability": "Full-time",
+        "bio": "Passionate about cloud native application design. Looking to help scale a promising Cybersecurity startup."
+    },
+    {
+        "id": 31,
+        "name": "Robert Williams",
+        "role": "AI Engineer",
+        "skills": [
+            "TensorFlow",
+            "RAG",
+            "LLMs"
+        ],
+        "interests": [
+            "EdTech",
+            "E-commerce",
+            "Agriculture"
+        ],
+        "experience": 8,
+        "availability": "Full-time",
+        "bio": "AI researcher turned engineer, looking to apply foundation models to real-world problems in EdTech."
+    },
+    {
+        "id": 32,
+        "name": "John Martin",
+        "role": "Machine Learning Engineer",
+        "skills": [
+            "Deep Learning",
+            "Python",
+            "Pandas",
+            "MLOps",
+            "SQL",
+            "Scikit-Learn"
+        ],
+        "interests": [
+            "ClimateTech",
+            "SaaS",
+            "E-commerce"
+        ],
+        "experience": 7,
+        "availability": "Part-time",
+        "bio": "Specializes in training and deploying complex ML models. Seeking to automate processes in the ClimateTech space."
+    },
+    {
+        "id": 33,
+        "name": "Alex Martinez",
+        "role": "Full Stack Developer",
+        "skills": [
+            "TypeScript",
+            "React",
+            "Node.js",
+            "Next.js",
+            "AWS",
+            "Docker"
+        ],
+        "interests": [
+            "FinTech",
+            "Robotics",
+            "EdTech",
+            "AI"
+        ],
+        "experience": 1,
+        "availability": "Full-time",
+        "bio": "Dynamic developer with a passion for building scalable web apps from scratch. Looking to join a fast-paced FinTech project."
+    },
+    {
+        "id": 34,
+        "name": "Liam Thompson",
+        "role": "Backend Developer",
+        "skills": [
+            "Python",
+            "FastAPI",
+            "Docker"
+        ],
+        "interests": [
+            "ClimateTech",
+            "SaaS",
+            "Agriculture",
+            "AI"
+        ],
+        "experience": 9,
+        "availability": "Part-time",
+        "bio": "Enjoys solving complex backend problems and optimizing database queries. Looking to build the core engine of a ClimateTech startup."
+    },
+    {
+        "id": 35,
+        "name": "Scarlett Perez",
+        "role": "Frontend Developer",
+        "skills": [
+            "Vue",
+            "HTML/CSS",
+            "Tailwind CSS",
+            "TypeScript",
+            "React"
+        ],
+        "interests": [
+            "AI",
+            "E-commerce",
+            "ClimateTech"
+        ],
+        "experience": 4,
+        "availability": "Full-time",
+        "bio": "Crafts highly responsive and beautiful user interfaces. Excited about bringing interactive designs to life in AI."
+    },
+    {
+        "id": 36,
+        "name": "John Harris",
+        "role": "Mobile Developer",
+        "skills": [
+            "iOS",
+            "Flutter",
+            "Dart",
+            "React Native",
+            "Android"
+        ],
+        "interests": [
+            "ClimateTech",
+            "Agriculture",
+            "Cybersecurity",
+            "Robotics"
+        ],
+        "experience": 4,
+        "availability": "Part-time",
+        "bio": "Mobile-first developer who builds cross-platform and native apps. Seeking to create a mobile revolution in ClimateTech."
+    },
+    {
+        "id": 37,
+        "name": "Elijah Smith",
+        "role": "Data Scientist",
+        "skills": [
+            "Data Analysis",
+            "R",
+            "Statistics"
+        ],
+        "interests": [
+            "Healthcare",
+            "EdTech",
+            "Cybersecurity",
+            "AI"
+        ],
+        "experience": 2,
+        "availability": "Part-time",
+        "bio": "Data scientist with a strong statistics background. Interested in optimizing operations for Healthcare startups."
+    },
+    {
+        "id": 38,
+        "name": "Emily Brown",
+        "role": "Product Manager",
+        "skills": [
+            "Agile",
+            "Scrum",
+            "Jira",
+            "Roadmapping",
+            "User Research",
+            "A/B Testing"
+        ],
+        "interests": [
+            "FinTech",
+            "EdTech",
+            "Healthcare"
+        ],
+        "experience": 1,
+        "availability": "Part-time",
+        "bio": "User-centric product manager focused on shipping impactful features. Looking to lead product strategy in the FinTech sector."
+    },
+    {
+        "id": 39,
+        "name": "Ethan Garcia",
+        "role": "UI/UX Designer",
+        "skills": [
+            "Wireframing",
+            "Sketch",
+            "Visual Design",
+            "Adobe XD",
+            "Prototyping"
+        ],
+        "interests": [
+            "Robotics",
+            "FinTech",
+            "E-commerce"
+        ],
+        "experience": 2,
+        "availability": "Part-time",
+        "bio": "Strives to create simple, elegant solutions to complex user problems. Interested in designing for Robotics."
+    },
+    {
+        "id": 40,
+        "name": "Mason Lopez",
+        "role": "DevOps Engineer",
+        "skills": [
+            "CI/CD",
+            "Linux",
+            "Terraform",
+            "Docker"
+        ],
+        "interests": [
+            "AI",
+            "EdTech"
+        ],
+        "experience": 4,
+        "availability": "Full-time",
+        "bio": "Infrastructure and automation enthusiast. Looking to build secure and scalable cloud infrastructure for AI platforms."
+    }
+]
