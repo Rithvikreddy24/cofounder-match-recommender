@@ -11,17 +11,16 @@ def get_model() -> SentenceTransformer:
     if model is None:
         # Clear any stale closed client inside huggingface_hub (crucial for Windows/Uvicorn reloads)
         try:
-            from huggingface_hub.utils._http import close_session
-            close_session()
-        except ImportError:
+            import importlib
+            _http = importlib.import_module("huggingface_hub.utils._http")
+            if hasattr(_http, "close_session"):
+                getattr(_http, "close_session")()
+            elif hasattr(_http, "reset_sessions"):
+                getattr(_http, "reset_sessions")()
+        except Exception:
             pass
 
-        # Try loading locally from cache first to avoid network queries and httpx reload bugs
-        try:
-            model = SentenceTransformer("all-MiniLM-L6-v2", local_files_only=True)
-        except Exception:
-            # Fallback to online loading if model is not yet cached
-            model = SentenceTransformer("all-MiniLM-L6-v2")
+        model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
     return model
 
 
@@ -42,7 +41,14 @@ def generate_embedding(profile: dict) -> np.ndarray:
     Generate an embedding for a single founder profile.
     """
     text = profile_to_text(profile)
-    return cast(np.ndarray, get_model().encode(text))
+    return cast(
+        np.ndarray,
+        get_model().encode(
+            text,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+        ),
+    )
 
 
 def generate_embeddings(profiles: list) -> list[np.ndarray]:
