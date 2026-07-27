@@ -1,122 +1,109 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState, useEffect } from "react";
+import ProfileSelector from "./components/ProfileSelector";
+import MatchList from "./components/MatchList";
+import LoadingSpinner from "./components/LoadingSpinner";
+import ErrorMessage from "./components/ErrorMessage";
+import { getProfiles, getMatches } from "./services/api";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [profiles, setProfiles] = useState([]);
+    const [selectedProfile, setSelectedProfile] = useState("");
+    const [matches, setMatches] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    // Load actual profiles dynamically from the backend on mount
+    useEffect(() => {
+        async function fetchProfiles() {
+            try {
+                const data = await getProfiles();
+                setProfiles(data);
+            } catch (err) {
+                console.error("Error loading profiles:", err);
+                setError("Unable to load founder profiles from the backend server. Please verify the backend is running.");
+            }
+        }
+        fetchProfiles();
+    }, []);
 
-      <div className="ticks"></div>
+    function onProfileChangeAndReset(profileId) {
+        setSelectedProfile(profileId);
+        setMatches([]);
+        setError("");
+    }
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    async function handleFindMatches() {
+        if (!selectedProfile) return;
+        try {
+            setLoading(true);
+            setError("");
+            setMatches([]); // Clear previous matches during load
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            const data = await getMatches(selectedProfile);
+            setMatches(data);
+        } catch (err) {
+            console.error("Error fetching matches:", err);
+            setError("Unable to fetch recommendations. Please check the backend connection.");
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    return (
+        <div className="app">
+            <header className="hero-section">
+                <div className="hero-icon-container">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="36" height="36" className="hero-icon">
+                        <circle cx="12" cy="5" r="3.5" />
+                        <circle cx="5" cy="18" r="3.5" />
+                        <circle cx="19" cy="18" r="3.5" />
+                        <line x1="12" y1="8.5" x2="6.5" y2="15.5" strokeDasharray="2.5 2.5" />
+                        <line x1="12" y1="8.5" x2="17.5" y2="15.5" strokeDasharray="2.5 2.5" />
+                        <line x1="8.5" y1="18" x2="15.5" y2="18" strokeDasharray="2.5 2.5" />
+                        <path d="M12 11.5l0.8 1.6 1.6 0.8-1.6 0.8-0.8 1.6-0.8-1.6-1.6-0.8 1.6-0.8z" fill="currentColor" stroke="none" />
+                    </svg>
+                </div>
+                <h1>Co-founder Match <span className="gradient-text">Recommender</span></h1>
+                <p className="hero-subtitle">AI-powered founder compatibility recommendations using semantic profile matching.</p>
+            </header>
+
+            <ProfileSelector
+                profiles={profiles}
+                selectedProfile={selectedProfile}
+                onProfileChange={onProfileChangeAndReset}
+                onFindMatches={handleFindMatches}
+            />
+
+            {loading && <LoadingSpinner />}
+
+            {error && <ErrorMessage message={error} />}
+
+            {!loading && !error && matches.length > 0 && (
+                <>
+                    <MatchList matches={matches} />
+                    <div className="bottom-status-bar">
+                        <div className="status-left">
+                            <span className="status-sparkle">✨</span> Showing top 5 compatible founders for <strong className="active-founder-highlight">{profiles.find(p => p.id === parseInt(selectedProfile))?.name}</strong>
+                        </div>
+                        <div className="status-right">
+                            <span className="status-badge">3 of 5 shown</span>
+                            <span className="status-divider">•</span>
+                            <span className="status-sort-text">Sorted by compatibility</span>
+                        </div>
+                    </div>
+                </>
+            )}
+
+            {!loading && !error && matches.length === 0 && (
+                <div className="empty-state">
+                    <div className="empty-state-icon">👥</div>
+                    <h3>Ready to Match</h3>
+                    <p>Select a founder profile from the dropdown selector above and click "Find Matches" to discover compatible matches.</p>
+                </div>
+            )}
+        </div>
+    );
 }
 
-export default App
+export default App;

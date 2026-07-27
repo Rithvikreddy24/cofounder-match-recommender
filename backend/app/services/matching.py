@@ -27,8 +27,6 @@ def initialize_embeddings():
     for p, emb in zip(profiles, embeddings):
         profile_embeddings[p["id"]] = emb
 
-# Initialize immediately when this service is imported
-initialize_embeddings()
 
 def compute_cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
     """
@@ -142,6 +140,10 @@ def get_recommendations(user_id: int, top_n: int = 5) -> List[Dict[str, Any]]:
     Generate top N recommendations for a query user ID.
     Excludes the queried user, computes a weighted score, sorts by score desc.
     """
+    # Lazy initialize embeddings if not already cached
+    if not profile_embeddings:
+        initialize_embeddings()
+
     if user_id not in profiles_dict:
         raise ValueError(f"Profile with ID {user_id} does not exist.")
         
